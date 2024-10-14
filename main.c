@@ -3,6 +3,7 @@
 #include "menus.h"
 #include "player.h"
 #include "game.h"
+#include "ai.h"
 
 int main(void)
 {
@@ -33,7 +34,7 @@ int main(void)
       if(playMode == 1 || (playMode == 2 && player == 1)){
         playerMove(&player);
       } else if(playMode == 2 && player == 2){
-        
+        aiMove(&player);
       }
       
       winner = checkWinner();

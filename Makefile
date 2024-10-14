@@ -2,7 +2,7 @@
 
 CC = gcc
 CFLAGS = -Wall -g
-OBJ = main.o game.o board.o player.o menus.o
+OBJ = main.o game.o board.o player.o menus.o ai.o
 EXEC = tic_tac_toe
 
 all: $(EXEC)

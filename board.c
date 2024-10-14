@@ -11,6 +11,7 @@ void printBoard() {
   printf("\n---|---|---\n");
   printf(" %c | %c | %c", board[2][0], board[2][1], board[2][2]);
   printf("\n---|---|---\n");
+  printf("\n");
 }
 
 int checkEmptySpaces() {
