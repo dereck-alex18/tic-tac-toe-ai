@@ -30,7 +30,12 @@ int main(void)
     while (checkEmptySpaces())
     {
       printBoard();
-      playerMove(&player);
+      if(playMode == 1 || (playMode == 2 && player == 1)){
+        playerMove(&player);
+      } else if(playMode == 2 && player == 2){
+        
+      }
+      
       winner = checkWinner();
 
       if (winner == 1 || winner == -1)
