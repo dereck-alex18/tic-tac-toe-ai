@@ -4,7 +4,7 @@
 
 void playerMove(int *player) {
   int row, col;
-  
+
   printf("Player %d turn\n", *player);
   printf("Enter the row and column you want to play\n: ");
   scanf("%d %d", &row, &col);
@@ -20,9 +20,9 @@ void playerMove(int *player) {
   }
 
   if (*player == 1) {
-    board[row][col] = 'X';
+    board[row][col] = PLAYER_1;
   } else {
-    board[row][col] = 'O';
+    board[row][col] = PLAYER_2;
   }
 }
 

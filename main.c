@@ -15,7 +15,7 @@ int main(void) {
       playerMove(&player);
       winner = checkWinner();
 
-      if (winner == 1) {
+      if (winner == 1 || winner == -1) {
         break;
       }
       swapPlayers(&player);
