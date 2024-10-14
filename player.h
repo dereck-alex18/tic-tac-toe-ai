@@ -4,6 +4,6 @@
 #define PLAYER_2 'O'
 
 void playerMove(int *player);
-void swapPlayers (int *player);
+void swapPlayers(int *player);
 
 #endif

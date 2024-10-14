@@ -1,30 +1,52 @@
 #include <stdio.h>
 #include "board.h"
+#include "menus.h"
 #include "player.h"
 #include "game.h"
 
-int main(void) {
+int main(void)
+{
   int player = 1;
   int winner = 0;
   char playAgain = 'y';
+  int playMode = 0;
 
-  while (playAgain == 'y' || playAgain == 'Y') {
+  
+
+  while (playAgain == 'y' || playAgain == 'Y')
+  {
+    initialMenu(&playMode);
+    if (playMode == 1)
+    {
+      printf("You chose Human vs Human. The player 1 mark will be X while the player 2 will be O\n");
+      printf("Have fun! :)");
+    }
+    else
+    {
+      aiLevelSelection();
+    }
+
     resetGame(&player);
-    while (checkEmptySpaces()) {
+    while (checkEmptySpaces())
+    {
       printBoard();
       playerMove(&player);
       winner = checkWinner();
 
-      if (winner == 1 || winner == -1) {
+      if (winner == 1 || winner == -1)
+      {
         break;
       }
       swapPlayers(&player);
     }
     printBoard();
 
-    if (winner) {
+    if (winner)
+    {
       printf("Congratulations player %d, you are the winner!\n", player);
-    } else {
+    }
+    else
+    {
       printf("The game was a Tie! ");
     }
 
