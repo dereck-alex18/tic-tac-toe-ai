@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "board.h"
 #include "player.h"
 #include "menus.h"
@@ -69,10 +70,10 @@ void aiMove(int *player)
     switch (aiLevel)
     {
     case 1:
-        depth = 1;
+        depth = 2;
         break;
     case 2:
-        depth = 2;
+        depth = 3;
         break;
     case 3:
         depth = 4;
@@ -80,8 +81,7 @@ void aiMove(int *player)
     case 4:
         depth = 100000;
         break;
-        
-    
+
     default:
         break;
     }
@@ -104,6 +104,21 @@ void aiMove(int *player)
                 }
             }
         }
+    }
+
+    if (depth == 3 && rand() % 10 < 6)
+    {
+        do
+        {
+            bestRow = rand() % 3;
+            bestRow = rand() % 3;
+        } while (board[bestRow][bestCol] != ' ');
+    } else if(depth == 4 && rand() % 10 < 4){
+        do
+        {
+            bestRow = rand() % 3;
+            bestRow = rand() % 3;
+        } while (board[bestRow][bestCol] != ' ');
     }
 
     board[bestRow][bestCol] = PLAYER_2;
