@@ -107,14 +107,14 @@ void aiMove(int *player)
         }
     }
 
-    if (depth == 3 && rand() % 10 < 5)
+    if (depth == 3 && rand() % 10 < 3)
     {
         do
         {
             bestRow = rand() % 3;
             bestCol = rand() % 3;
         } while (board[bestRow][bestCol] != ' ');
-    } else if(depth == 4 && rand() % 10 < 2){
+    } else if(depth == 4 && rand() % 10 < 1){
         do
         {
             bestRow = rand() % 3;

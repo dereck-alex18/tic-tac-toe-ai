@@ -7,7 +7,7 @@ void taunt(int result)
     const char *lose[] = {
         "It's official, you suck!",
         "Bow down, human!",
-        "AIs are superior than humans.",
+        "AIs are superior to humans.",
         "HAHAHAHA Loser!",
         "Too easy beating you!",
         "Come on, give me a real challenge!"};
@@ -26,7 +26,7 @@ void taunt(int result)
         int randomIndex = rand() % (sizeof(lose) / sizeof(lose[0]));
         printf("%s\n", lose[randomIndex]);
     } else {
-        int randomIndex = rand() % (sizeof(tie) / sizeof(tie));
+        int randomIndex = rand() % (sizeof(tie) / sizeof(tie[0]));
         printf("%s\n", tie[randomIndex]);
     }
 }
