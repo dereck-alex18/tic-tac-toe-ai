@@ -59,12 +59,16 @@ int main(void)
         taunt(2);
       }else{
         printf("Congratulations player %d, you are the winner!\n", player);
+        if(playMode == 2){
+          taunt(1);
+        }
+        
       }
       
     }
     else
     {
-      printf("The game was a Tie! ");
+      printf("The game was a Tie!\n");
       taunt(0);
     }
 
