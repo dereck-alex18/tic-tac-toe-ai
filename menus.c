@@ -16,15 +16,15 @@ void initialMenu(int *playMode){
 }
 
 void aiLevelSelection(){
-    printf("You chose Human vs AI. Please select the level of the AI: \n");
+    printf("\n\nYou chose Human vs AI. Please select the level of the AI: \n");
     printf("1 - Can I play, daddy?\n");
     printf("2 - Hey, take it easy!\n");
     printf("3 - Let's Rock.\n");
-    printf("4 - I'm death incarnate!!!\n");
+    printf("4 - I'm death incarnate!!!\n\n");
     scanf("%d", &aiLevel);
 
     if(aiLevel < 1 || aiLevel > 4){
-        printf("Invalid option! Please select a valid one!\n");
+        printf("Invalid option! Please select a valid one!\n\n");
         aiLevelSelection();
     }
 }

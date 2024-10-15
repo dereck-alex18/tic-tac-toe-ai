@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include "board.h"
 #include "menus.h"
+#include "machine_interaction.h"
 #include "player.h"
 #include "game.h"
 #include "ai.h"
+#include <unistd.h>
 
 int main(void)
 {
@@ -20,10 +22,11 @@ int main(void)
     if (playMode == 1)
     {
       printf("You chose Human vs Human. The player 1 mark will be X while the player 2 will be O\n");
-      printf("Have fun! :)");
+      printf("Have fun! :)\n");
     }
     else
     {
+      
       aiLevelSelection();
     }
 
@@ -34,6 +37,8 @@ int main(void)
       if(playMode == 1 || (playMode == 2 && player == 1)){
         playerMove(&player);
       } else if(playMode == 2 && player == 2){
+        printf("AI is thinking...\n");
+        sleep(2);
         aiMove(&player);
       }
       
@@ -49,11 +54,18 @@ int main(void)
 
     if (winner)
     {
-      printf("Congratulations player %d, you are the winner!\n", player);
+      if(player == 2 && playMode == 2){
+        printf("\nAI wins!\n");
+        taunt(2);
+      }else{
+        printf("Congratulations player %d, you are the winner!\n", player);
+      }
+      
     }
     else
     {
       printf("The game was a Tie! ");
+      taunt(0);
     }
 
     printf("Would you like to play again? (y/n)\n");

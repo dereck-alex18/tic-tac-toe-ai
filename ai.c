@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "board.h"
 #include "player.h"
 #include "menus.h"
@@ -64,7 +65,7 @@ int minMaxWithDepth(int isMaximizing, int depth)
 
 void aiMove(int *player)
 {
-    printf("Ai move!!!\n");
+    srand(time(0));
     int bestScore = 1000, bestRow = -1, bestCol = -1, depth = aiLevel * 1000, score;
 
     switch (aiLevel)
@@ -106,18 +107,18 @@ void aiMove(int *player)
         }
     }
 
-    if (depth == 3 && rand() % 10 < 6)
+    if (depth == 3 && rand() % 10 < 5)
     {
         do
         {
             bestRow = rand() % 3;
-            bestRow = rand() % 3;
+            bestCol = rand() % 3;
         } while (board[bestRow][bestCol] != ' ');
-    } else if(depth == 4 && rand() % 10 < 4){
+    } else if(depth == 4 && rand() % 10 < 2){
         do
         {
             bestRow = rand() % 3;
-            bestRow = rand() % 3;
+            bestCol = rand() % 3;
         } while (board[bestRow][bestCol] != ' ');
     }
 
