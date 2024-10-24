@@ -1,5 +1,13 @@
 
-Welcome to the Tic-Tac-Toe project! This project implements a Tic-Tac-Toe game in C, leveraging a custom CLI library for keyboard, screen, and time functions.
+Welcome to Tic-Tac-Toe Showdown!
+
+Are you ready to test your strategy and wit? Whether you're facing off against a friend or challenging our AI, Tic-Tac-Toe Showdown is the perfect way to sharpen your skills. Choose from two exciting play modes:
+
+Human vs. Human: Go head-to-head with a friend in a classic battle of Xs and Os. Who will claim victory?
+
+Human vs. AI: Think you've got what it takes to beat the machine? Our AI offers 4 levels of difficulty, from beginner to unbeatable. Can you rise to the challenge?
+
+Pick your mode, choose your difficulty, and let the games begin!
 
 **📁 Project Structure**  
 
