@@ -124,5 +124,4 @@ void aiMove(int *player)
 
     board[bestRow][bestCol] = PLAYER_2;
 
-    printf("Ai chooses row: %d and col: %d\n\n", bestRow, bestCol);
 }

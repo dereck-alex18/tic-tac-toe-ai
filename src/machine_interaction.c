@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "screen.h"
+
 
 void taunt(int result)
 {
@@ -41,7 +43,7 @@ void taunt(int result)
 
     if(result == 1){
         int randomIndex = rand() % (sizeof(win) / sizeof(win[0]));
-
+         screenGotoxy(9, 9);
         printf("%s\n", win[randomIndex]);
         snprintf(command, sizeof(command), "espeak -v en-us -p 20 -s 100 \"%s\"", win[randomIndex]);
         system(command);
@@ -49,14 +51,16 @@ void taunt(int result)
     else if (result == 2)
     {
         int randomIndex = rand() % (sizeof(lose) / sizeof(lose[0]));
-
+         screenGotoxy(9, 9);
         printf("%s\n", lose[randomIndex]);
         snprintf(command, sizeof(command), "espeak -v en-us -p 20 -s 100 \"%s\"", lose[randomIndex]);
         system(command);
     }
     else
     {
+
         int randomIndex = rand() % (sizeof(tie) / sizeof(tie[0]));
+         screenGotoxy(9, 9);
         printf("%s\n", tie[randomIndex]);
         snprintf(command, sizeof(command), "espeak -v en-us -p 20 -s 100 \"%s\"", tie[randomIndex]);
         system(command);
