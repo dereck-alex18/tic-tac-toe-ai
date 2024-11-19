@@ -54,3 +54,9 @@ Restarting the Game:
 
 
 At the end of each game, players have the option to restart, allowing them to switch modes or try different AI difficulty levels. This restart feature offers a continuous and customizable gameplay experience, whether players want to challenge the AI or compete with a friend.
+
+**🎮 How to run the game:**
+1. open the terminal on the root folder
+2. Install espeak by running "sudo apt-get install espeak -y" (This is for the AI voice)
+3. To compile and run: "make run"
+4. To delete all .o files, run: "make clean"

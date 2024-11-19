@@ -8,24 +8,21 @@ char board[3][3];
 
 void printBoard() {
   int row, col;
-    
-    // Initialize the screen 
     screenInit(1);
     
-    // Draw the Tic-Tac-Toe grid
     for (row = 0; row < GRID_SIZE; row++) {
         for (col = 0; col < GRID_SIZE; col++) {
-            screenGotoxy(30 + col * 4, 3 + row * 2);  // Adjust coordinates based on your grid
+            screenGotoxy(30 + col * 4, 3 + row * 2);  
             printf("%c", board[row][col]);
             if (col < GRID_SIZE - 1) {
-                printf(" | "); // Vertical line
+                printf(" | ");
                 
             }
         }
         
         if (row < GRID_SIZE - 1) {
-            screenGotoxy(27, 4 + row * 2); // Move below the vertical lines
-            printf("---------------"); // Horizontal line
+            screenGotoxy(27, 4 + row * 2); 
+            printf("---------------"); 
         }
     }
     
